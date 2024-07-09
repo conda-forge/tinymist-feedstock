@@ -10,7 +10,7 @@ source:
   sha256: eda55d165c0de8f7978eeec5cad8c206af36dacb407e0118b94fb3eabe7204be
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -19,6 +19,8 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
+    - openssl  # [linux]
+  run:
     - openssl  # [linux]
 
 test:
