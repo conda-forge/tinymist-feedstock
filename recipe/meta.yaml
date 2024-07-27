@@ -1,5 +1,5 @@
 {% set name = "tinymist" %}
-{% set version = "0.11.16" %}
+{% set version = "0.11.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Myriad-Dreamin/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 10f2facdb8cb57b92f58502e90cf68b3dacdf5d6c01f116a67f080f3364ecadb
+  sha256: 9f756c3c2f1483f7d03a4b6d4e466f9981a9f58fb34ce01e2f5467ffb6069bef
 
 build:
   number: 0
