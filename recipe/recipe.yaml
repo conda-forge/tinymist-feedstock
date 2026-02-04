@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: tinymist
+  version: 0.13.31
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/Myriad-Dreamin/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: ddf91a25ffb7975687c410f0316cc9480df193d650c6514b329ed7797e77209f
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('rust') }}
+    - cargo-bundle-licenses
+  host:
+    - if: linux
+      then: openssl
+  run:
+    - if: linux
+      then: openssl
+
+tests:
+  - script:
+      - tinymist --version
+
+about:
+  summary: An integrated language service for Typst.
+  license: Apache-2.0
+  license_file:
+    - LICENSE
+    - THIRDPARTY_LICENSES.yaml
+  homepage: https://github.com/Myriad-Dreamin/tinymist
+
+extra:
+  recipe-maintainers:
+    - freundTech
