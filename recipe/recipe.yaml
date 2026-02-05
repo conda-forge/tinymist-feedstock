@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tinymist
-  version: 0.14.8
+  version: 0.14.10
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/Myriad-Dreamin/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 22d4d682df5ad56496da6965e74f0a89f00133c22a30c1c07f1bb45acd841aa7
+  sha256: 215c08d8a10ff51e15711f0684eafc85d119dc98db57f4f47ec7bf5987ea681e
 
 build:
   number: 0
